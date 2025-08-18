@@ -74,10 +74,10 @@ Par jo mere saath nahi, uska pyaar kya karun?
 Khud se hi baat karta hun roz raat ko,
 Kyunki doosron se jo keh na sakun, woh raaz kya karun?`,
     theme: {
-      gradient: "from-rose-900 via-pink-800 to-purple-900",
+       gradient: "from-rose-900 via-pink-800 to-purple-900",
       accentColor: "#f43f5e",
       textColor: "#fdf2f8",
-      bgPattern: "linear-gradient(45deg, rgba(244, 63, 94, 0.1) 25%, transparent 25%, transparent 75%, rgba(244, 63, 94, 0.1) 75%)"
+      bgPattern: "linear-gradient(45deg, rgba(244, 63, 94, 0.1) 25%, transparent 25%, transparent 75%, rgba(244, 63, 94, 0.1) 75%)"
     }
   },
   {
