@@ -77,8 +77,8 @@ const Footer = () => {
               I'm always open to connecting with fellow poets and literature enthusiasts.
             </p>
             <div className="space-y-2 text-sm">
-              <p>📧 Email: <a href="mailto:aryan.writes@email.com" className="text-gold hover:underline">aryan.writes@email.com</a></p>
-              <p>📱 Instagram: <a href="https://instagram.com/aryanwrites" className="text-gold hover:underline">@aryanwrites</a></p>
+              <p>📧 Email: <a href="mailto:aryan.writes@email.com" className="text-gold hover:underline">aryanpriyadarshi96@gmail.com</a></p>
+              <p>📱 Instagram: <a href="https://www.instagram.com/aryanwrites.18" className="text-gold hover:underline">@aryanwrites</a></p>
             </div>
           </div>
         </div>
