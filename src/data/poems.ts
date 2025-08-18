@@ -9,6 +9,7 @@ export interface Poem {
     accentColor: string;
     textColor: string;
     bgPattern?: string;
+    patternPosition?: string;
   };
   featured?: boolean;
 }
@@ -44,9 +45,10 @@ In the quiet rebellion of choosing to stay
 When every sermon tells me to repent.`,
     theme: {
       gradient: "from-slate-900 via-purple-900 to-slate-900",
-      accentColor: "#a855f7",
-      textColor: "#e2e8f0",
-      bgPattern: "radial-gradient(circle at 25% 25%, rgba(168, 85, 247, 0.1) 0%, transparent 50%)"
+      accentColor: "#c084fc",
+      textColor: "#f0e7fe",
+      bgPattern: "radial-gradient(circle at 20% 30%, rgba(192, 132, 252, 0.15) 0%, transparent 45%)",
+      patternPosition: "top left"
     }
   },
   {
@@ -115,10 +117,11 @@ Jaise mujhe lagta hai ki tum hamesha mere saath ho?
 Agar main nahi rahunga,
 Toh please, mujhe bhool mat jaana...`,
     theme: {
-      gradient: "from-indigo-900 via-blue-800 to-cyan-800",
-      accentColor: "#3b82f6",
+      gradient: "from-indigo-900 via-sky-800 to-blue-900",
+      accentColor: "#60a5fa",
       textColor: "#dbeafe",
-      bgPattern: "repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(59, 130, 246, 0.05) 100px, rgba(59, 130, 246, 0.05) 200px)"
+      bgPattern: "repeating-linear-gradient(30deg, transparent, transparent 2px, rgba(96, 165, 250, 0.08) 2px, rgba(96, 165, 250, 0.08) 4px)",
+      patternPosition: "top right"
     }
   },
   {
@@ -152,10 +155,11 @@ now breathes with phantom pain,
 and I've learned that emptiness
 is just love with a different name.`,
     theme: {
-      gradient: "from-gray-900 via-slate-800 to-gray-900",
-      accentColor: "#64748b",
-      textColor: "#f1f5f9",
-      bgPattern: "radial-gradient(ellipse at center, rgba(100, 116, 139, 0.1) 0%, transparent 70%)"
+      gradient: "from-slate-800 via-gray-800 to-zinc-900",
+      accentColor: "#a1a1aa",
+      textColor: "#f4f4f5",
+      bgPattern: "radial-gradient(ellipse at 80% 20%, rgba(161, 161, 170, 0.1) 0%, transparent 70%)",
+      patternPosition: "bottom left"
     }
   },
   {
@@ -189,10 +193,11 @@ The darkness doesn't judge,
 It simply holds space
 For all the things I cannot say in light.`,
     theme: {
-      gradient: "from-violet-900 via-purple-900 to-indigo-900",
-      accentColor: "#8b5cf6",
+      gradient: "from-violet-900 via-purple-800 to-indigo-900",
+      accentColor: "#a78bfa",
       textColor: "#ede9fe",
-      bgPattern: "conic-gradient(from 0deg at 50% 50%, rgba(139, 92, 246, 0.1) 0deg, transparent 60deg, rgba(139, 92, 246, 0.05) 120deg, transparent 180deg)"
+      bgPattern: "conic-gradient(from 230deg at 30% 65%, rgba(167, 139, 250, 0.12) 0deg, transparent 60deg, rgba(167, 139, 250, 0.08) 120deg, transparent 180deg)",
+      patternPosition: "center"
     }
   },
   {
@@ -222,10 +227,11 @@ Har saans mein tera naam bulata hun main.
 Agar yahi hai zindagi, toh yun hi jeeta hun,
 Teri mohabbat mein hi khush rehta hun main.`,
     theme: {
-      gradient: "from-amber-900 via-orange-800 to-red-900",
-      accentColor: "#f59e0b",
-      textColor: "#fef3c7",
-      bgPattern: "linear-gradient(135deg, rgba(245, 158, 11, 0.1) 25%, transparent 25%, transparent 75%, rgba(245, 158, 11, 0.1) 75%)"
+      gradient: "from-amber-800 via-orange-800 to-rose-900",
+      accentColor: "#fb923c",
+      textColor: "#fffbeb",
+      bgPattern: "linear-gradient(125deg, transparent 65%, rgba(251, 146, 60, 0.15) 65%, rgba(251, 146, 60, 0.15) 70%, transparent 70%)",
+      patternPosition: "bottom right"
     }
   }
 ];

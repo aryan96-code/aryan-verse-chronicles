@@ -1,177 +1,279 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Share2, Heart } from "lucide-react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { getPoemById } from "@/data/poems";
+import { ArrowLeft, Share2, BookOpen, Heart, Mic, Star } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const PoemPage = () => {
   const { id } = useParams<{ id: string }>();
   const { toast } = useToast();
-  const poem = id ? getPoemById(id) : null;
+  const poem = getPoemById(id || "");
 
   if (!poem) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-slate-800">
-        <Card className="p-8 text-center bg-white/10 backdrop-blur-lg border-white/20">
-          <h1 className="text-2xl font-bold text-white mb-4">Poem Not Found</h1>
-          <p className="text-white/80 mb-6">The poem you're looking for doesn't exist.</p>
-          <Button asChild variant="outline" className="text-white border-white/30 hover:bg-white/10">
-            <Link to="/">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
+      <motion.div 
+        className="min-h-screen flex items-center justify-center px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <div className="text-center max-w-md">
+          <div className="text-6xl mb-6 opacity-50">📚</div>
+          <h1 className="text-3xl font-bold mb-4">Poem Not Found</h1>
+          <p className="text-muted-foreground mb-8 leading-relaxed">
+            The poem you're looking for might have been moved or doesn't exist. 
+            Let's get you back to exploring our collection.
+          </p>
+          <Button asChild>
+            <Link to="/" className="flex items-center gap-2">
+              <ArrowLeft className="h-4 w-4" />
+              Back to Collection
             </Link>
           </Button>
-        </Card>
-      </div>
+        </div>
+      </motion.div>
     );
   }
 
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'english': return <BookOpen className="h-4 w-4" />;
+      case 'hindi': return <Heart className="h-4 w-4" />;
+      case 'shayari': return <Mic className="h-4 w-4" />;
+      default: return <BookOpen className="h-4 w-4" />;
+    }
+  };
+
   const handleShare = async () => {
+    const shareData = {
+      title: poem.title,
+      text: `Check out this beautiful poem: "${poem.title}"`,
+      url: window.location.href,
+    };
+
     try {
       if (navigator.share) {
-        await navigator.share({
-          title: poem.title,
-          text: poem.preview,
-          url: window.location.href,
-        });
+        await navigator.share(shareData);
       } else {
         await navigator.clipboard.writeText(window.location.href);
         toast({
-          title: "Link Copied!",
-          description: "Poem link has been copied to clipboard.",
+          title: "Link copied!",
+          description: "Poem link has been copied to your clipboard.",
         });
       }
     } catch (error) {
-      console.error("Sharing failed:", error);
+      console.error("Error sharing:", error);
     }
   };
 
   return (
-    <div 
-      className={`min-h-screen bg-gradient-to-br ${poem.theme.gradient} relative overflow-hidden`}
-      style={{ 
-        backgroundImage: poem.theme.bgPattern 
-      }}
+    <motion.div 
+      className="min-h-screen py-8 px-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
     >
-      {/* Navigation Bar */}
-      <nav className="relative z-10 p-4 bg-black/20 backdrop-blur-sm border-b border-white/10">
-        <div className="max-w-4xl mx-auto flex justify-between items-center">
-          <Button 
-            asChild 
-            variant="ghost" 
-            className="text-white hover:bg-white/10 hover:text-white"
-          >
-            <Link to="/">
-              <ArrowLeft className="w-4 h-4 mr-2" />
+      <div className="max-w-5xl mx-auto">
+        {/* Navigation */}
+        <motion.div 
+          className="flex items-center justify-between mb-8"
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          <Button variant="ghost" asChild className="text-muted-foreground hover:text-foreground">
+            <Link to="/" className="flex items-center gap-2">
+              <ArrowLeft className="h-4 w-4" />
               Back to Collection
             </Link>
           </Button>
           
-          <div className="flex gap-2">
-            <Button 
-              variant="ghost" 
-              size="sm"
-              onClick={handleShare}
-              className="text-white hover:bg-white/10 hover:text-white"
-            >
-              <Share2 className="w-4 h-4" />
-            </Button>
-          </div>
-        </div>
-      </nav>
+          <Button variant="outline" onClick={handleShare} className="flex items-center gap-2">
+            <Share2 className="h-4 w-4" />
+            Share Poem
+          </Button>
+        </motion.div>
 
-      {/* Poem Content */}
-      <main className="relative z-10 px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          {/* Poem Header */}
-          <div className="text-center mb-12">
-            <div className="inline-block bg-white/10 backdrop-blur-lg rounded-full px-6 py-2 mb-6 border border-white/20">
-              <span className="text-sm font-medium" style={{ color: poem.theme.textColor }}>
-                {poem.category.charAt(0).toUpperCase() + poem.category.slice(1)} Poetry
-              </span>
-            </div>
+        {/* Poem content with enhanced theming */}
+        <motion.div 
+          className="relative rounded-3xl overflow-hidden shadow-2xl"
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.7, type: "spring" }}
+        >
+          {/* Dynamic background layers */}
+          <div className={`absolute inset-0 bg-gradient-to-br ${poem.theme.gradient}`} />
+          
+          {/* Enhanced background pattern */}
+          {poem.theme.bgPattern && (
+            <motion.div 
+              className="absolute inset-0 opacity-20"
+              initial={{ scale: 1.2, opacity: 0 }}
+              animate={{ scale: 1, opacity: 0.2 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              style={{ 
+                backgroundImage: poem.theme.bgPattern,
+                backgroundPosition: poem.theme.patternPosition || 'center',
+                backgroundSize: '150%'
+              }}
+            />
+          )}
+          
+          {/* Subtle animated overlay */}
+          <motion.div 
+            className="absolute inset-0"
+            animate={{ 
+              background: [
+                'radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0%, transparent 50%)',
+                'radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 0%, transparent 50%)',
+                'radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0%, transparent 50%)'
+              ]
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+
+          {/* Content */}
+          <div className="relative z-10 p-8 md:p-16" style={{ color: poem.theme.textColor }}>
+            {/* Header with badges */}
+            <motion.div 
+              className="flex flex-wrap gap-4 mb-8"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <Badge 
+                className="flex items-center gap-2 px-4 py-2 text-sm font-medium"
+                style={{ backgroundColor: poem.theme.accentColor, color: '#111' }}
+              >
+                {getCategoryIcon(poem.category)}
+                {poem.category.charAt(0).toUpperCase() + poem.category.slice(1)}
+              </Badge>
+              
+              {poem.featured && (
+                <Badge 
+                  variant="secondary" 
+                  className="flex items-center gap-2 px-4 py-2 text-sm bg-background/20 backdrop-blur-sm text-foreground/90"
+                >
+                  <Star className="h-4 w-4 fill-current" />
+                  Featured Poem
+                </Badge>
+              )}
+            </motion.div>
             
-            <h1 
-              className="text-4xl md:text-6xl font-merriweather font-bold mb-6 leading-tight"
-              style={{ color: poem.theme.textColor }}
+            {/* Title with enhanced typography */}
+            <motion.h1 
+              className="text-4xl md:text-6xl font-bold mb-12 leading-tight"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              style={{ 
+                textShadow: `0 4px 20px ${poem.theme.accentColor}40`,
+                letterSpacing: '-0.02em'
+              }}
             >
               {poem.title}
-            </h1>
+            </motion.h1>
             
-            <div 
-              className="w-24 h-1 mx-auto rounded-full"
-              style={{ backgroundColor: poem.theme.accentColor }}
-            ></div>
-          </div>
-
-          {/* Poem Text */}
-          <Card className="bg-black/30 backdrop-blur-lg border border-white/20 shadow-2xl">
-            <div className="p-8 md:p-12">
-              <div 
-                className="font-merriweather text-lg md:text-xl leading-relaxed whitespace-pre-line text-center text-white"
-              >
-                {poem.fullText}
-              </div>
-            </div>
-          </Card>
-
-          {/* Author Signature */}
-          <div className="text-center mt-12">
-            <div 
-              className="font-dancing text-2xl md:text-3xl"
-              style={{ color: poem.theme.accentColor }}
+            {/* Poem text with enhanced readability */}
+            <motion.div 
+              className="mb-16"
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
             >
-              ~ Aryan Writes
-            </div>
-          </div>
+              <pre className="whitespace-pre-wrap font-sans text-lg md:text-xl leading-relaxed tracking-wide opacity-95 text-center">
+                {poem.fullText}
+              </pre>
+            </motion.div>
+            
+            {/* Enhanced signature line with gradient */}
+            <motion.div 
+              className="w-24 h-1.5 rounded-full mb-12 bg-gradient-to-r opacity-80 mx-auto"
+              style={{ 
+                background: `linear-gradient(90deg, ${poem.theme.accentColor}, transparent)`
+              }}
+              initial={{ width: 0 }}
+              animate={{ width: '6rem' }}
+              transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
+            />
 
-          {/* Call to Action */}
-          <div className="text-center mt-16">
-            <div className="space-y-4">
-              <p 
-                className="text-lg mb-6"
-                style={{ color: poem.theme.textColor }}
+            {/* Author Signature */}
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.1 }}
+            >
+              <div 
+                className="font-dancing text-2xl md:text-3xl"
+                style={{ color: poem.theme.accentColor }}
               >
-                Enjoyed this poem? Explore more of my poetry collection
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  asChild
-                  className="bg-white/20 hover:bg-white/30 text-white border border-white/30 hover:border-white/50 backdrop-blur-sm"
-                >
-                  <Link to="/#poems">
-                    <Heart className="w-4 h-4 mr-2" />
-                    More Poems
-                  </Link>
-                </Button>
-                <Button 
-                  asChild
-                  variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10 hover:text-white"
-                >
-                  <Link to="/#contact">
-                    Connect With Me
-                  </Link>
-                </Button>
+                ~ Aryan Writes
               </div>
-            </div>
+            </motion.div>
+            
+            {/* Call to action with better spacing */}
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-6 justify-center"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.2 }}
+            >
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-background/20 hover:bg-background/30 text-foreground border border-foreground/20 hover:border-foreground/40 backdrop-blur-sm transition-all duration-300"
+              >
+                <Link to="/#poems">
+                  <Heart className="h-4 w-4 mr-2" />
+                  Explore More Poems
+                </Link>
+              </Button>
+              
+              <Button 
+                asChild 
+                variant="outline" 
+                size="lg"
+                className="border-foreground/20 hover:border-foreground/40 bg-transparent hover:bg-background/10 backdrop-blur-sm"
+              >
+                <Link to="/#contact">Connect With Me</Link>
+              </Button>
+            </motion.div>
           </div>
-        </div>
-      </main>
 
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div 
-          className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full opacity-20 animate-float"
-          style={{ backgroundColor: poem.theme.accentColor }}
-        ></div>
-        <div 
-          className="absolute bottom-1/4 right-1/4 w-24 h-24 rounded-full opacity-10 animate-float"
-          style={{ backgroundColor: poem.theme.accentColor, animationDelay: '2s' }}
-        ></div>
+          {/* Decorative animated elements */}
+          <motion.div 
+            className="absolute top-20 right-20 w-32 h-32 rounded-full opacity-5"
+            style={{ backgroundColor: poem.theme.accentColor }}
+            animate={{ 
+              scale: [1, 1.2, 1],
+              rotate: [0, 180, 360] 
+            }}
+            transition={{ 
+              duration: 15, 
+              repeat: Infinity, 
+              ease: "linear" 
+            }}
+          />
+          
+          <motion.div 
+            className="absolute bottom-20 left-20 w-20 h-20 rounded-full opacity-10"
+            style={{ backgroundColor: poem.theme.accentColor }}
+            animate={{ 
+              scale: [1.2, 1, 1.2],
+              x: [0, 20, 0],
+              y: [0, -10, 0]
+            }}
+            transition={{ 
+              duration: 10, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+          />
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
