@@ -106,11 +106,10 @@ const PoemPage = () => {
           </div>
 
           {/* Poem Text */}
-          <Card className="bg-white/5 backdrop-blur-lg border border-white/10 shadow-2xl">
+          <Card className="bg-black/30 backdrop-blur-lg border border-white/20 shadow-2xl">
             <div className="p-8 md:p-12">
               <div 
-                className="font-merriweather text-lg md:text-xl leading-relaxed whitespace-pre-line text-center"
-                style={{ color: poem.theme.textColor }}
+                className="font-merriweather text-lg md:text-xl leading-relaxed whitespace-pre-line text-center text-white"
               >
                 {poem.fullText}
               </div>
