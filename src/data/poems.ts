@@ -61,20 +61,28 @@ Chaand to taaron se ghira hua hai sada se,`,
     fullText: `Jo milne waala nahi, uska intezaar kya karun?
 Har mod pe bas khamoshiyaan ho, toh izhaar kya karun?
 Chaand to taaron se ghira hua hai sada se,
-Main akela hun, apne khawabon ka sahara kya karun?
+to aise chaand se main wafaadari kya krun?
 
-Raat ke andhere mein chhupe hue sitare,
-Mujhse keh rahe hain ki umang bhara kya karun?
-Toote hue rishtey ki yaadein le kar,
-In bikhre hue tukdon ka sahara kya karun?
+ hnn beshaq koi aur bhii likhega uske baare mein,
+par kisi aur ki likhayi se main kyu darun?
+main to wo hoon jo har lafz me khud ko jala chuka,
+to kisi aur ke alfazon se main kyu darun?
 
-Zindagi ki raah mein chalne ka junoon hai,
-Lekin manzil ka pata na ho, toh guzara kya karun?
-Mohabbat ka naam sunkar dil machalta hai,
-Par jo mere saath nahi, uska pyaar kya karun?
+ jab chaand ko pasand hai taaarein,
+to main chaand ke piche kyu marun?
+jisne meri Roshni me kbhi dekha hi nahi,
+uske liye khud ko kyun main kam krun?
 
-Khud se hi baat karta hun roz raat ko,
-Kyunki doosron se jo keh na sakun, woh raaz kya karun?`,
+ab chaand bhi bhid me kho raha hai,
+na pehchaan bachi na Roshni ka nasha,
+aise chaand ka main kya krun?
+jiska noor bhi ab dikhne lga jhutha sa,
+
+to ab khud ka aasman sajata hoon,
+na chaand chahiye na taare, main khud ek sitara hoon.
+
+jo tha, so tha... ab likhni hai kahani apni,
+main dard se guzra hoon... par ab main har zakhm ka shayar hoon.`,
     theme: {
        gradient: "from-rose-900 via-pink-800 to-purple-900",
       accentColor: "#f43f5e",
@@ -87,7 +95,7 @@ Kyunki doosron se jo keh na sakun, woh raaz kya karun?`,
     title: "Longing & Loss",
     category: "hindi",
     preview: `"Jab Main Nahi Rahunga..." 
-
+"Jab Main Nahi Rahunga..." 
 Kya tab bhi aaogi tum mujhse milne?
 Usi chehre ko choone, jise dekhkar
 Tumne kaha tha -
@@ -99,23 +107,29 @@ Usi chehre ko choone, jise dekhkar
 Tumne kaha tha -
 "Ab yeh nazara bhi beimaan lagta hai..."
 
-Kya tab bhi sunogi tum meri awaaz?
-Wahi purani shayari, jo maine tumhare liye likhi thi,
-Jise padh kar tumne kaha tha -
-"Lagta hai tumne mera dil chura liya hai..."
+ Kya toote hue sheeshe ki tarah
+Mere bikhre hue aksh ko jodogi?
+Woh saansein jo tumhare naam pe rukti thi,
+Kya unki khamoshi se baat karogi?
 
-Main soch raha hun, agar main nahi rahunga,
-Toh kya tum bhool jaaogi mere saath ke woh pal?
-Woh hasna, woh rone ka bahana,
-Woh chupke-chupke haath pakadna...
+ Tumne kaha tha - "Tumhara pyaar kam hai",
+Par aaj mere kafan ke neeche
+Kya tumhe woh dastakhat dikhenge -
+Jahaan maine tumhare liye
+Apni zindagi ki aakhri siyahi khatam kar di thi?
 
-Ya phir yaad karogi mujhe,
-Jaise main tumhe yaad karta hun rozana?
-Kya tab bhi lagega tumhe ki main kahin paas hun,
-Jaise mujhe lagta hai ki tum hamesha mere saath ho?
+ Kya ginogi meri haddiyon pe
+Un ghaavon ke nishaan -
+Jo tumhare har "Mujhe jaane do" ne chhode the?
+Kya padh paogi mere safed honton pe
+Woh adhura waakya -
+"Maaf karna, tumhe rok liya..."
 
-Agar main nahi rahunga,
-Toh please, mujhe bhool mat jaana...`,
+ Aur jab tum jalaogi meri yaadon ko,
+To dhuen mein udti ek chitthi nazar aayegi —
+Shayad woh meri aakhri koshish hogi
+Tum tak pahunchne ki...
+Par hawa use bhi tumse door le jaayegi.`,
     theme: {
       gradient: "from-indigo-900 via-sky-800 to-blue-900",
       accentColor: "#60a5fa",
