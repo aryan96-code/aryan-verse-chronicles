@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { getPoemById } from "@/data/poems";
 import { ArrowLeft, Share2, BookOpen, Heart, Mic, Star } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import FavoriteButton from "@/components/FavoriteButton";
 
 const PoemPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -89,10 +90,13 @@ const PoemPage = () => {
             </Link>
           </Button>
           
-          <Button variant="outline" onClick={handleShare} className="flex items-center gap-2">
-            <Share2 className="h-4 w-4" />
-            Share Poem
-          </Button>
+          <div className="flex items-center gap-2">
+            <FavoriteButton poemId={poem.id} />
+            <Button variant="outline" onClick={handleShare} className="flex items-center gap-2">
+              <Share2 className="h-4 w-4" />
+              Share Poem
+            </Button>
+          </div>
         </motion.div>
 
         {/* Poem content with enhanced theming */}

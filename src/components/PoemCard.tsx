@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Poem } from "@/data/poems";
 import { BookOpen, Heart, Mic, Star } from "lucide-react";
+import FavoriteButton from "./FavoriteButton";
 
 interface PoemCardProps {
   poem: Poem;
@@ -70,32 +71,36 @@ const PoemCard = ({ poem }: PoemCardProps) => {
         <div className="relative z-10 flex flex-col h-full p-6" style={{ color: poem.theme.textColor }}>
           <CardHeader className="p-0 mb-4">
             <div className="flex justify-between items-start mb-3">
-              <motion.div
-                animate={{ 
-                  backgroundColor: isHovered ? `${poem.theme.accentColor}20` : poem.theme.accentColor,
-                  scale: isHovered ? 1.05 : 1
-                }}
-                className="flex items-center gap-1 text-xs px-3 py-1.5 rounded-full font-medium capitalize"
-                style={{ 
-                  backgroundColor: poem.theme.accentColor, 
-                  color: '#111'
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                {getCategoryIcon(poem.category)}
-                {poem.category}
-              </motion.div>
-              
-              {poem.featured && (
+              <div className="flex items-center gap-2">
                 <motion.div
-                  initial={{ rotate: 0 }}
-                  animate={{ rotate: isHovered ? 12 : 0 }}
-                  className="flex items-center gap-1 text-xs px-2 py-1 rounded bg-background/20 backdrop-blur-sm text-foreground/90"
+                  animate={{ 
+                    backgroundColor: isHovered ? `${poem.theme.accentColor}20` : poem.theme.accentColor,
+                    scale: isHovered ? 1.05 : 1
+                  }}
+                  className="flex items-center gap-1 text-xs px-3 py-1.5 rounded-full font-medium capitalize"
+                  style={{ 
+                    backgroundColor: poem.theme.accentColor, 
+                    color: '#111'
+                  }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <Star className="h-3 w-3 fill-current" />
-                  Featured
+                  {getCategoryIcon(poem.category)}
+                  {poem.category}
                 </motion.div>
-              )}
+                
+                {poem.featured && (
+                  <motion.div
+                    initial={{ rotate: 0 }}
+                    animate={{ rotate: isHovered ? 12 : 0 }}
+                    className="flex items-center gap-1 text-xs px-2 py-1 rounded bg-background/20 backdrop-blur-sm text-foreground/90"
+                  >
+                    <Star className="h-3 w-3 fill-current" />
+                    Featured
+                  </motion.div>
+                )}
+              </div>
+              
+              <FavoriteButton poemId={poem.id} />
             </div>
             
             <CardTitle 

@@ -2,11 +2,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PoemCard from "./PoemCard";
-import { poems, getPoemsByCategory } from "@/data/poems";
+import SearchBar from "./SearchBar";
+import { poems, getPoemsByCategory, Poem } from "@/data/poems";
 import { BookOpen, Heart, Mic, Sparkles } from "lucide-react";
 
 const PoemsCollection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
   const [filteredPoems, setFilteredPoems] = useState(poems);
 
   const categories = [
@@ -18,7 +20,28 @@ const PoemsCollection = () => {
 
   const handleCategoryChange = (category: string) => {
     setActiveCategory(category);
-    setFilteredPoems(getPoemsByCategory(category));
+    const categoryPoems = getPoemsByCategory(category);
+    applyFilters(categoryPoems, searchQuery);
+  };
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    const categoryPoems = getPoemsByCategory(activeCategory);
+    applyFilters(categoryPoems, query);
+  };
+
+  const applyFilters = (poemsToFilter: Poem[], query: string) => {
+    if (!query) {
+      setFilteredPoems(poemsToFilter);
+      return;
+    }
+
+    const filtered = poemsToFilter.filter(poem => 
+      poem.title.toLowerCase().includes(query.toLowerCase()) ||
+      poem.fullText.toLowerCase().includes(query.toLowerCase()) ||
+      poem.category.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredPoems(filtered);
   };
 
   return (
@@ -39,6 +62,16 @@ const PoemsCollection = () => {
             Explore heartfelt poems across different languages and emotions. 
             Each piece captures a moment, a feeling, a story waiting to be discovered.
           </p>
+        </motion.div>
+        
+        {/* Search Bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <SearchBar onSearch={handleSearch} />
         </motion.div>
         
         {/* Enhanced category filter */}
