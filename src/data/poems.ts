@@ -320,7 +320,7 @@ Isi andhere ko gin rahi ho?`,
 हो सकता है मैं बस एक स्याही का धब्बा,  
 पर तू है तो दर्द भी रौशनी लगता है,  
 और तेरे जाने के बाद की सुबह...  
-बस एक सन्नाटा लगता है।`, 
+बस एक सन्नाटा लगता है।`,
   theme: {
     gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
     accentColor: "#8b5cf6", // hex color for accents
