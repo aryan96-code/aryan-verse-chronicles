@@ -51,6 +51,320 @@ When every sermon tells me to repent.`,
       patternPosition: "top left"
     }
   },
+{
+  id: "wo chali gayi, to kya hua?", 
+  title: "wo chali gayi, to kya hua?",
+  category: "shayri", 
+  preview: `wo chali gayi, to kya hua?
+main zinda hoon, par ye swaal rah gya..`, // short preview text
+  fullText: `wo chali gayi, to kya hua?
+main zinda hoon, par ye swaal rah gya..
+
+jab laut ke ayegii wo,
+to milunga use-magar dhalti shaam ki Tarah,
+khoya hua sa, bikhra hua saa...
+
+mere kamre me ab sirf kitabein haii,
+aur khwabon ke siwa kuch nahii, 
+wo jab ayegi to paayegii-
+main hoon, magar sirf dikhawe ke liye.
+
+zindagi to chlti rhegii,
+magar ab wo meri nahi,
+bas ek saya hoga waqt ka,
+jo uske saamne jhuthi muskan liye khada hoga...`, 
+  theme: {
+    gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
+    accentColor: "#8b5cf6", // hex color for accents
+    textColor: "#e0e7ff", // hex color for text
+    bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", 
+    patternPosition: "center" 
+  }
+},
+{
+  id: "marne ke baad bhi tmhara hoon", 
+  title: "marne ke baad bhi tmhara hoon",
+  category: "hindi", 
+  preview: `kal jisne kaha tha "tmse  nafrat hai"
+aaj wahi mere kafan par gulab rakh gaii...
+kya dekhni aai thii...`, 
+  fullText: `kal jisne kaha tha "tmse  nafrat hai"
+aaj wahi mere kafan par gulab rakh gaii...
+kya dekhni aai thii...
+ki meri chuppi me koi jawab to nahi?
+
+usne chhua mera haath-
+jaise dar rhi ho ki achanak pakad na lun,
+maine socha tha markar bhi nhi milunga,
+par ye kya -
+wo mere laash se maafi maang rahi thii...
+
+uski aankho me wahi sawaal tha - 
+"tumhe galat samjha kya main?"
+magar ab to mere hoth sile hue the,
+sayad wo sun paati agar taharti ak pal aur..
+
+wo royi nahi , bas usne 
+meri dayri ka wo panna faara,
+jahan maine likha tha-
+"marne ke baad bhi tmhara hoon.."
+
+ab wo har shaam meri kabr par
+akhbar ka wo tukda rkh jaati hai,
+jisme likha hai-
+"adhure pyaar ki laash mili.."`,
+  theme: {
+    gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
+    accentColor: "#8b5cf6", // hex color for accents
+    textColor: "#e0e7ff", // hex color for text
+    bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", // optional background pattern
+    patternPosition: "bottom left" // optional: "top left", "bottom right", etc.
+  }
+},
+{
+  id: " मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...  ", 
+  title: "मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...",
+  category: "shayri", 
+  preview: `मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...  
+ तू हवा बन के बिखेर दे या फिर मिट्टी बन के छुपा ले,`,  
+  fullText: `"मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...  
+> तू हवा बन के बिखेर दे या फिर मिट्टी बन के छुपा ले,  
+> पर इतना कर कि कोई पूछे भी तो कह सकूँ —  
+> 'वो मेरा नहीं था, मगर मैं उसकी थी... ये बात अब तक दिल में है तो है।'"`, 
+  theme: {
+    gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
+    accentColor: "#8b5cf6", // hex color for accents
+    textColor: "#e0e7ff", // hex color for text
+    bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", // optional background pattern
+    patternPosition: "center" // optional: "top left", "bottom right", etc.
+  }
+},
+{
+  id: "Tere Bin Jeete Hue Bhi Hum Marr Gaye",  
+  title: "Tere Bin Jeete Hue Bhi Hum Marr Gaye",
+  category: "hindi",  
+  preview: `Tere bin jeete hue bhi hum marr gaye,
+Kho diya apna aap, sab kuch haar gaye,
+Ham tumhare kya hue, bas sawaal reh gaye,`, 
+  fullText: `Tere bin jeete hue bhi hum marr gaye,
+Kho diya apna aap, sab kuch haar gaye,
+Ham tumhare kya hue, bas sawaal reh gaye,
+Hum wahin hain, par kahin ke nahin rahe.
+
+Teri saanson ki hawa bhi ek nasha thi,
+Teri aankhon mein ek alag hi duniya thi,
+Hum wahi kho gaye jahan teri ek nazar thi,
+Ab har jagah wahi khaalipan, wahi tanhai hai.
+
+Tera hona hi kuch aur tha, ek ehsaas tha,
+Tera chhod jaana ek aisa zakhm hai,
+Hum woi mombatti hai jo hawa se pehle hi,
+Bujh gaye... bin tere hi raakh ho gaye.
+
+Ham tumhare kya hue, bas sawaal hi reh gaye,
+Khud se bhi aaj anjaan hai, tumse bhi begane hai,
+Woh jism bhi ab bojh hai, woh dil bhi ab pathhar hai,
+Hum wahin hain, par hum kahin ke nahin rahe.
+
+Ham hasrat hi rehte to kam se kam tum,
+Hamaare khwabon mein to zinda rehte...
+Ab to khwab bhi toot kar bikhar gaye hain,
+Aur hum... hum bas ek aah banke reh gaye hain`, // full poem content
+  theme: {
+    gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
+    accentColor: "#8b5cf6", // hex color for accents
+    textColor: "#e0e7ff", // hex color for text
+    bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", // optional background pattern
+    patternPosition: "center" // optional: "top left", "bottom right", etc.
+  }
+},
+{
+  id: "Tere Nishaan",  
+  title: "Tere Nishaan",
+  category: "shayri", 
+  featured: true,
+  preview: `Tere jaane ke baad bhi,  
+Mere kamre ki hawa ne seekh li hai -  
+Tere perfume ki tarah thaerna`, 
+  fullText: `Tere jaane ke baad bhi,  
+Mere kamre ki hawa ne seekh li hai -  
+Tere perfume ki tarah thaerna.
+
+Woh gift-bags abhi bhi khali nahi hote,  
+Unmein se nikalti hai teri aawaz -  
+"Ye to rakh lo, meri yaad ban jayega..."  
+
+Aur woh tissue...  
+Jis par tune lipstick chhod di thi,  
+Ab woh mere honton ka hissa hai,  
+Har gam ko chup-chap ponchta hua.  
+
+Main abhi bhi pehanta hoon woh shirt,  
+Jismein tum kehti thi -  
+"Dekho, mera rang chadh gaya tum par!"  
+Par ab woh rang feeka padta hai,  
+Har dhulai mein tumhari yaad ke saath.  
+
+Aur haan...  
+Main abhi bhi chaand se baatein karta hoon,  
+Kyuki woh bhi tumhari tarah  
+Meri baat sunkar chup rehta hai.  
+
+Shaam dhalte hi sooraj doobne lagta hai,  
+Aur main sochta hoon -  
+Kya tum bhi kahin  
+Isi andhere ko gin rahi ho?`, 
+  theme: {
+    gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
+    accentColor: "#8b5cf6", // hex color for accents
+    textColor: "#e0e7ff", // hex color for text
+    bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", // optional background pattern
+    patternPosition: "center" // optional: "top left", "bottom right", etc.
+  }
+},
+{
+  id: "तेरे साथ हर बर्बादी भी — "दुआ" लगती है",  
+  title: "तेरे साथ हर बर्बादी भी — "दुआ" लगती है",
+  category: "hindi",  
+  preview: `लोग रोकते हैं...
+"रुक जा! ये राह अंधेरी है,
+इश्क़ तेरा तुझे निगल जाएगा,`,  
+  fullText: `लोग रोकते हैं...
+"रुक जा! ये राह अंधेरी है,
+इश्क़ तेरा तुझे निगल जाएगा,
+दुनिया तुझे बर्बाद कर जाएगी!"
+
+उनकी बातों से डरता तो नहीं,
+पर कभी-कभी सोचता हूँ —
+"क्या वाकई… मेरे सारे सपने,
+मेरी पहचान, मेरी खुशियाँ—
+सब कुछ खो जाएगा, बस उस एक चेहरे के लिए?"
+
+फिर भी…
+जब तेरी याद आती है,
+दिल की हर धड़कन कहती है —
+"अगर उसकी मुस्कान मिल जाए,
+तो बर्बाद हो जाएँ सारे दिन!
+अगर उसकी आवाज़ सुनाई दे,
+तो मिट जाए मेरी हर कहानी!"
+
+और अगर…
+वो दिन आ भी जाए,
+जब तूने मुझे अपनाया,
+मेरी आँखों में देखा,
+और मेरा हाथ थाम लिया —
+
+तो फिर चाहे…
+आसमान टूट पड़े,
+या ज़मीन साथ छोड़ दे,
+रिश्ते बिखर जाएँ,
+आँखों में आँसुओं का समंदर हो —
+
+लेकिन देख!
+मेरे होंठों पर एक मुस्कान होगी,
+मेरी रूह को सुकून मिलेगा —
+क्योंकि जब तू मिला,
+तो ये सारी "बर्बादी" ही,
+मुझे खुद से मिला गई।
+
+हाँ…
+बर्बाद हुआ मैं, तेरे इश्क़ में,
+जली मेरी दुनिया, पर यादें रौशन रहीं।
+हर दर्द अब गीत लगता है,
+हर आँसू अब साज़ लगता है।
+
+क्योंकि तू है मेरे साथ,
+तो ज़िंदगी का हर ज़ख्म,
+तेरी मोहब्बत का इनाम लगता है।
+
+बस इतना कहना है…
+तेरे प्यार की सज़ा हो या परीक्षा,
+मैं खुदा से भी लड़ जाऊँगा,
+हर ग़म को सीने से लगा लूँगा,
+क्योंकि तू जो मिल गया…
+तो हर खोई चीज़ भी,
+तेरा एहसास बन गई।
+तेरे बिना जीना सज़ा थी…
+तेरे साथ हर बर्बादी भी — "दुआ" लगती है।`,  
+  theme: {
+    gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
+    accentColor: "#8b5cf6", // hex color for accents
+    textColor: "#e0e7ff", // hex color for text
+    bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", // optional background pattern
+    patternPosition: "middle left" 
+  }
+}, 
+{
+  id: "तेरे जाने के बाद",  
+  title: "तेरे जाने के बाद",
+  category: "hindi", 
+  preview: `ये जो दिल के टुकड़े होते हैं रोज़,  
+ये जो साँसों में काँटे चुभते हैं,  
+मैं सब सह लूँ... पर तुझे भूल जाने का`,  
+  fullText: `ये जो दिल के टुकड़े होते हैं रोज़,  
+ये जो साँसों में काँटे चुभते हैं,  
+मैं सब सह लूँ... पर तुझे भूल जाने का,  
+वो ख़ालीपन, वो सूनापन,  
+उससे तो ये ज़ख़्म जन्नत लगते हैं।  
+तेरा नाम आता है तो रूह काँप जाती है,  
+यादों के ग़म से जिस्म थक जाता है,  
+पर जिस रात तू सपनों में नहीं आती,  
+वो रात...  
+मौत से भी लम्बी जाती है।  
+क्यों निभाऊँ मैं ये अधूरा सफ़र तेरा?  
+क्यों बनूँ मैं तेरे पैरों की धूल?  
+क्योंकि तेरे बिना जो शाम ढलेगी,  
+वो सूरज डूबने से पहले ही,  
+अँधेरा बन के टूट जाएगी।  
+हो सकता है ये प्यार ज़हर हो तेरा,  
+हो सकता है मैं बस एक स्याही का धब्बा,  
+पर तू है तो दर्द भी रौशनी लगता है,  
+और तेरे जाने के बाद की सुबह...  
+बस एक सन्नाटा लगता है।`, 
+  theme: {
+    gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
+    accentColor: "#8b5cf6", // hex color for accents
+    textColor: "#e0e7ff", // hex color for text
+    bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", // optional background pattern
+    patternPosition: "bottom left" 
+  }
+},
+{
+  id: "ये जो दिल के टुकड़े होते हैं रोज़", 
+  title: "ये जो दिल के टुकड़े होते हैं रोज़",
+  category: "hindi", 
+  featured: true, 
+  preview: `ये जो दिल के टुकड़े होते हैं रोज़,  
+ये जो साँसों में काँटे चुभते हैं,  
+मैं सब सह लूँ... पर तुझे भूल जाने का,`,
+  fullText: `ये जो दिल के टुकड़े होते हैं रोज़,  
+ये जो साँसों में काँटे चुभते हैं,  
+मैं सब सह लूँ... पर तुझे भूल जाने का,  
+वो ख़ालीपन, वो सूनापन,  
+उससे तो ये ज़ख़्म जन्नत लगते हैं।  
+तेरा नाम आता है तो रूह काँप जाती है,  
+यादों के ग़म से जिस्म थक जाता है,  
+पर जिस रात तू सपनों में नहीं आती,  
+वो रात...  
+मौत से भी लम्बी जाती है।  
+क्यों निभाऊँ मैं ये अधूरा सफ़र तेरा?  
+क्यों बनूँ मैं तेरे पैरों की धूल?  
+क्योंकि तेरे बिना जो शाम ढलेगी,  
+वो सूरज डूबने से पहले ही,  
+अँधेरा बन के टूट जाएगी।  
+हो सकता है ये प्यार ज़हर हो तेरा,  
+हो सकता है मैं बस एक स्याही का धब्बा,  
+पर तू है तो दर्द भी रौशनी लगता है,  
+और तेरे जाने के बाद की सुबह...  
+बस एक सन्नाटा लगता है। `, 
+  theme: {
+    gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
+    accentColor: "#8b5cf6", // hex color for accents
+    textColor: "#e0e7ff", // hex color for text
+    bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", // optional background pattern
+    patternPosition: "center" 
+  }
+},
   {
     id: "self-discovery",
     title: "Self-Discovery",
