@@ -52,36 +52,6 @@ When every sermon tells me to repent.`,
     }
   },
 {
-  id: "wo chali gayi, to kya hua?", 
-  title: "wo chali gayi, to kya hua?",
-  category:"shayari",
-  preview:`wo chali gayi, to kya hua?
-main zinda hoon, par ye swaal rah gya..`,
-  fullText:`wo chali gayi, to kya hua?
-main zinda hoon, par ye swaal rah gya..
-
-jab laut ke ayegii wo,
-to milunga use-magar dhalti shaam ki Tarah,
-khoya hua sa, bikhra hua saa...
-
-mere kamre me ab sirf kitabein haii,
-aur khwabon ke siwa kuch nahii, 
-wo jab ayegi to paayegii-
-main hoon, magar sirf dikhawe ke liye.
-
-zindagi to chlti rhegii,
-magar ab wo meri nahi,
-bas ek saya hoga waqt ka,
-jo uske saamne jhuthi muskan liye khada hoga...`, 
-  theme: {
-    gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
-    accentColor: "#8b5cf6", // hex color for accents
-    textColor: "#e0e7ff", // hex color for text
-    bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", 
-    patternPosition: "center" 
-  }
-},
-{
   id: "marne ke baad bhi tmhara hoon", 
   title: "marne ke baad bhi tmhara hoon",
   category: "hindi", 
