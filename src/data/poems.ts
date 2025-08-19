@@ -54,10 +54,10 @@ When every sermon tells me to repent.`,
 {
   id: "wo chali gayi, to kya hua?", 
   title: "wo chali gayi, to kya hua?",
-  category: "shayari",
-  preview: `wo chali gayi, to kya hua?
-main zinda hoon, par ye swaal rah gya..`, // short preview text
-  fullText: `wo chali gayi, to kya hua?
+  category:"shayari",
+  preview:`wo chali gayi, to kya hua?
+main zinda hoon, par ye swaal rah gya..`,
+  fullText:`wo chali gayi, to kya hua?
 main zinda hoon, par ye swaal rah gya..
 
 jab laut ke ayegii wo,
@@ -366,9 +366,9 @@ Isi andhere ko gin rahi ho?`,
   }
 },
   {
-    id: "self-discovery",
-    title: "Self-Discovery",
-    category: "shayari",
+    id: "Main Khud Ek Sitara Hoon",
+    title: "Main Khud Ek Sitara Hoony",
+    category: "hindi",
     preview: `Jo milne waala nahi, uska intezaar kya karun?
 Har mod pe bas khamoshiyaan ho, toh izhaar kya karun?
 Chaand to taaron se ghira hua hai sada se,`,
