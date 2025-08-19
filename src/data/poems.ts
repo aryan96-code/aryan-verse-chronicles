@@ -54,7 +54,7 @@ When every sermon tells me to repent.`,
 {
   id: "wo chali gayi, to kya hua?", 
   title: "wo chali gayi, to kya hua?",
-  category: "shayri", 
+  category: "shayari",
   preview: `wo chali gayi, to kya hua?
 main zinda hoon, par ye swaal rah gya..`, // short preview text
   fullText: `wo chali gayi, to kya hua?
@@ -124,7 +124,7 @@ jisme likha hai-
 {
   id: " मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...  ", 
   title: "मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...",
-  category: "shayri", 
+  category: "shayari",
   preview: `मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...  
  तू हवा बन के बिखेर दे या फिर मिट्टी बन के छुपा ले,`,  
   fullText: `"मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...  
@@ -181,7 +181,7 @@ Aur hum... hum bas ek aah banke reh gaye hain`, // full poem content
 {
   id: "Tere Nishaan",  
   title: "Tere Nishaan",
-  category: "shayri", 
+  category: "shayari", 
   featured: true,
   preview: `Tere jaane ke baad bhi,  
 Mere kamre ki hawa ne seekh li hai -  
@@ -223,8 +223,8 @@ Isi andhere ko gin rahi ho?`,
   }
 },
 {
-  id: "तेरे साथ हर बर्बादी भी — "दुआ" लगती है",  
-  title: "तेरे साथ हर बर्बादी भी — "दुआ" लगती है",
+  id: 'tere-saath-har-barbadi-bhi-dua-lagti-hai',  
+  title: 'तेरे साथ हर बर्बादी भी — "दुआ" लगती है',
   category: "hindi",  
   preview: `लोग रोकते हैं...
 "रुक जा! ये राह अंधेरी है,
