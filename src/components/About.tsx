@@ -69,7 +69,7 @@ const About = () => {
                 <div className="text-sm text-muted-foreground">Poems Written</div>
               </div>
               <div className="p-4">
-                <div className="text-2xl font-bold text-secondary">3</div>
+                <div className="text-2xl font-bold text-secondary">2</div>
                 <div className="text-sm text-muted-foreground">Languages</div>
               </div>
               <div className="p-4">
