@@ -367,7 +367,7 @@ Isi andhere ko gin rahi ho?`,
 },
   {
     id: "Main Khud Ek Sitara Hoon",
-    title: "Main Khud Ek Sitara Hoony",
+    title: "Main Khud Ek Sitara Hoon",
     category: "hindi",
     preview: `Jo milne waala nahi, uska intezaar kya karun?
 Har mod pe bas khamoshiyaan ho, toh izhaar kya karun?
