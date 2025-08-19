@@ -29,9 +29,11 @@ const Hero = () => {
           </h2>
           <div className="text-left font-merriweather text-sm md:text-base leading-relaxed whitespace-pre-line">
             {`It's not the flowing that breaks you.
-In the ghosts of laughter
-that can turn your silence later,
-will flow away from your heart.`}
+It’s not the leaving that breaks you.  
+It’s the ghosts of laughter  
+that curl up in your silence later,  
+and the way their voice still echoes  
+in the quiet..`}
           </div>
         </div>
 
