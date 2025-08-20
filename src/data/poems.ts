@@ -52,36 +52,6 @@ When every sermon tells me to repent.`,
     }
   },
 {
-  id: "wo-chali-gayi-to-kya-hua", 
-  title: "wo chali gayi, to kya hua?",
-  category: "shayari",
-  preview: `wo chali gayi, to kya hua?
-main zinda hoon, par ye swaal rah gya..`,
-  fullText: `wo chali gayi, to kya hua?
-main zinda hoon, par ye swaal rah gya..
-
-jab laut ke ayegii wo,
-to milunga use-magar dhalti shaam ki Tarah,
-khoya hua sa, bikhra hua saa...
-
-mere kamre me ab sirf kitabein haii,
-aur khwabon ke siwa kuch nahii, 
-wo jab ayegi to paayegii-
-main hoon, magar sirf dikhawe ke liye.
-
-zindagi to chlti rhegii,
-magar ab wo meri nahi,
-bas ek saya hoga waqt ka,
-jo uske saamne jhuthi muskan liye khada hoga...`, 
-  theme: {
-    gradient: "from-purple-900 via-blue-800 to-indigo-900",
-    accentColor: "#8b5cf6",
-    textColor: "#e0e7ff",
-    bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", 
-    patternPosition: "center" 
-  }
-},
-{
   id: "marne ke baad bhi tmhara hoon",
   title: "marne ke baad bhi tmhara hoon",
   category: "hindi", 
@@ -128,9 +98,9 @@ jisme likha hai-
   preview: `मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...  
  तू हवा बन के बिखेर दे या फिर मिट्टी बन के छुपा ले,`,  
   fullText: `"मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...  
-> तू हवा बन के बिखेर दे या फिर मिट्टी बन के छुपा ले,  
-> पर इतना कर कि कोई पूछे भी तो कह सकूँ —  
-> 'वो मेरा नहीं था, मगर मैं उसकी थी... ये बात अब तक दिल में है तो है।'"`, 
+ तू हवा बन के बिखेर दे या फिर मिट्टी बन के छुपा ले,  
+ पर इतना कर कि कोई पूछे भी तो कह सकूँ —  
+ 'वो मेरा नहीं था, मगर मैं उसकी थी... ये बात अब तक दिल में है तो है।'"`, 
   theme: {
     gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
     accentColor: "#8b5cf6", // hex color for accents
@@ -327,42 +297,6 @@ Isi andhere ko gin rahi ho?`,
     textColor: "#e0e7ff", // hex color for text
     bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", // optional background pattern
     patternPosition: "bottom left" 
-  }
-},
-{
-  id: "ये जो दिल के टुकड़े होते हैं रोज़", 
-  title: "ये जो दिल के टुकड़े होते हैं रोज़",
-  category: "hindi", 
-  featured: true, 
-  preview: `ये जो दिल के टुकड़े होते हैं रोज़,  
-ये जो साँसों में काँटे चुभते हैं,  
-मैं सब सह लूँ... पर तुझे भूल जाने का,`,
-  fullText: `ये जो दिल के टुकड़े होते हैं रोज़,  
-ये जो साँसों में काँटे चुभते हैं,  
-मैं सब सह लूँ... पर तुझे भूल जाने का,  
-वो ख़ालीपन, वो सूनापन,  
-उससे तो ये ज़ख़्म जन्नत लगते हैं।  
-तेरा नाम आता है तो रूह काँप जाती है,  
-यादों के ग़म से जिस्म थक जाता है,  
-पर जिस रात तू सपनों में नहीं आती,  
-वो रात...  
-मौत से भी लम्बी जाती है।  
-क्यों निभाऊँ मैं ये अधूरा सफ़र तेरा?  
-क्यों बनूँ मैं तेरे पैरों की धूल?  
-क्योंकि तेरे बिना जो शाम ढलेगी,  
-वो सूरज डूबने से पहले ही,  
-अँधेरा बन के टूट जाएगी।  
-हो सकता है ये प्यार ज़हर हो तेरा,  
-हो सकता है मैं बस एक स्याही का धब्बा,  
-पर तू है तो दर्द भी रौशनी लगता है,  
-और तेरे जाने के बाद की सुबह...  
-बस एक सन्नाटा लगता है। `, 
-  theme: {
-    gradient: "from-purple-900 via-blue-800 to-indigo-900", // tailwind gradient
-    accentColor: "#8b5cf6", // hex color for accents
-    textColor: "#e0e7ff", // hex color for text
-    bgPattern: "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", // optional background pattern
-    patternPosition: "center" 
   }
 },
   {
