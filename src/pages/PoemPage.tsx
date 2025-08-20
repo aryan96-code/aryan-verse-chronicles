@@ -1,16 +1,63 @@
 import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { getPoemById } from "@/data/poems";
 import { ArrowLeft, Share2, BookOpen, Heart, Mic, Star } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import FavoriteButton from "@/components/FavoriteButton";
+import { supabase } from "@/integrations/supabase/client";
+import { Poem } from "@/data/poems";
 
 const PoemPage = () => {
   const { id } = useParams<{ id: string }>();
   const { toast } = useToast();
-  const poem = getPoemById(id || "");
+  const [poem, setPoem] = useState<Poem | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (id) {
+      fetchPoem(id);
+    }
+  }, [id]);
+
+  const fetchPoem = async (poemId: string) => {
+    try {
+      const { data, error } = await supabase
+        .from('poems')
+        .select('*')
+        .eq('id', poemId)
+        .maybeSingle();
+      
+      if (error) {
+        console.error('Error fetching poem:', error);
+        return;
+      }
+      
+      if (data) {
+        const transformedPoem = {
+          ...data,
+          fullText: data.full_text
+        } as unknown as Poem;
+        setPoem(transformedPoem);
+      }
+    } catch (error) {
+      console.error('Error fetching poem:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Loading poem...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!poem) {
     return (
@@ -99,47 +146,16 @@ const PoemPage = () => {
           </div>
         </motion.div>
 
-        {/* Poem content with enhanced theming */}
+        {/* Poem content */}
         <motion.div 
           className="relative rounded-3xl overflow-hidden shadow-2xl"
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.7, type: "spring" }}
         >
-          {/* Dynamic background layers */}
           <div className={`absolute inset-0 bg-gradient-to-br ${poem.theme.gradient}`} />
           
-          {/* Enhanced background pattern */}
-          {poem.theme.bgPattern && (
-            <motion.div 
-              className="absolute inset-0 opacity-20"
-              initial={{ scale: 1.2, opacity: 0 }}
-              animate={{ scale: 1, opacity: 0.2 }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-              style={{ 
-                backgroundImage: poem.theme.bgPattern,
-                backgroundPosition: poem.theme.patternPosition || 'center',
-                backgroundSize: '150%'
-              }}
-            />
-          )}
-          
-          {/* Subtle animated overlay */}
-          <motion.div 
-            className="absolute inset-0"
-            animate={{ 
-              background: [
-                'radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0%, transparent 50%)',
-                'radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 0%, transparent 50%)',
-                'radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0%, transparent 50%)'
-              ]
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-
-          {/* Content */}
           <div className="relative z-10 p-8 md:p-16" style={{ color: poem.theme.textColor }}>
-            {/* Header with badges */}
             <motion.div 
               className="flex flex-wrap gap-4 mb-8"
               initial={{ y: 20, opacity: 0 }}
@@ -165,21 +181,15 @@ const PoemPage = () => {
               )}
             </motion.div>
             
-            {/* Title with enhanced typography */}
             <motion.h1 
               className="text-4xl md:text-6xl font-bold mb-12 leading-tight"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              style={{ 
-                textShadow: `0 4px 20px ${poem.theme.accentColor}40`,
-                letterSpacing: '-0.02em'
-              }}
             >
               {poem.title}
             </motion.h1>
             
-            {/* Poem text with enhanced readability */}
             <motion.div 
               className="mb-16"
               initial={{ y: 40, opacity: 0 }}
@@ -191,18 +201,6 @@ const PoemPage = () => {
               </pre>
             </motion.div>
             
-            {/* Enhanced signature line with gradient */}
-            <motion.div 
-              className="w-24 h-1.5 rounded-full mb-12 bg-gradient-to-r opacity-80 mx-auto"
-              style={{ 
-                background: `linear-gradient(90deg, ${poem.theme.accentColor}, transparent)`
-              }}
-              initial={{ width: 0 }}
-              animate={{ width: '6rem' }}
-              transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
-            />
-
-            {/* Author Signature */}
             <motion.div 
               className="text-center mb-16"
               initial={{ y: 20, opacity: 0 }}
@@ -217,64 +215,24 @@ const PoemPage = () => {
               </div>
             </motion.div>
             
-            {/* Call to action with better spacing */}
             <motion.div 
               className="flex flex-col sm:flex-row gap-6 justify-center"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.2 }}
             >
-              <Button 
-                asChild 
-                size="lg" 
-                className="bg-background/20 hover:bg-background/30 text-foreground border border-foreground/20 hover:border-foreground/40 backdrop-blur-sm transition-all duration-300"
-              >
+              <Button asChild size="lg" className="bg-background/20 hover:bg-background/30 text-foreground border border-foreground/20 hover:border-foreground/40 backdrop-blur-sm transition-all duration-300">
                 <Link to="/#poems">
                   <Heart className="h-4 w-4 mr-2" />
                   Explore More Poems
                 </Link>
               </Button>
               
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg"
-                className="border-foreground/20 hover:border-foreground/40 bg-transparent hover:bg-background/10 backdrop-blur-sm"
-              >
+              <Button asChild variant="outline" size="lg" className="border-foreground/20 hover:border-foreground/40 bg-transparent hover:bg-background/10 backdrop-blur-sm">
                 <Link to="/#contact">Connect With Me</Link>
               </Button>
             </motion.div>
           </div>
-
-          {/* Decorative animated elements */}
-          <motion.div 
-            className="absolute top-20 right-20 w-32 h-32 rounded-full opacity-5"
-            style={{ backgroundColor: poem.theme.accentColor }}
-            animate={{ 
-              scale: [1, 1.2, 1],
-              rotate: [0, 180, 360] 
-            }}
-            transition={{ 
-              duration: 15, 
-              repeat: Infinity, 
-              ease: "linear" 
-            }}
-          />
-          
-          <motion.div 
-            className="absolute bottom-20 left-20 w-20 h-20 rounded-full opacity-10"
-            style={{ backgroundColor: poem.theme.accentColor }}
-            animate={{ 
-              scale: [1.2, 1, 1.2],
-              x: [0, 20, 0],
-              y: [0, -10, 0]
-            }}
-            transition={{ 
-              duration: 10, 
-              repeat: Infinity, 
-              ease: "easeInOut" 
-            }}
-          />
         </motion.div>
       </div>
     </motion.div>

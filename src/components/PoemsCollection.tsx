@@ -3,13 +3,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PoemCard from "./PoemCard";
 import SearchBar from "./SearchBar";
-import { poems, getPoemsByCategory, Poem } from "@/data/poems";
 import { BookOpen, Heart, Mic, Sparkles } from "lucide-react";
+import { useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { Poem } from "@/data/poems";
 
 const PoemsCollection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredPoems, setFilteredPoems] = useState(poems);
+  const [poems, setPoems] = useState<Poem[]>([]);
+  const [filteredPoems, setFilteredPoems] = useState<Poem[]>([]);
+  const [loading, setLoading] = useState(true);
 
   const categories = [
     { id: "all", label: "All Poems", icon: Sparkles },
@@ -18,30 +22,67 @@ const PoemsCollection = () => {
     { id: "shayari", label: "Shayari", icon: Mic },
   ];
 
+  useEffect(() => {
+    fetchPoems();
+  }, []);
+
+  useEffect(() => {
+    applyFilters();
+  }, [poems, activeCategory, searchQuery]);
+
+  const fetchPoems = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('poems')
+        .select('*')
+        .order('created_at', { ascending: false });
+      
+      if (error) {
+        console.error('Error fetching poems:', error);
+        return;
+      }
+      
+      // Transform database format to match frontend interface
+      const transformedPoems: Poem[] = data?.map((poem: any) => ({
+        ...poem,
+        fullText: poem.full_text  // Map database field to frontend field
+      })) || [];
+      
+      setPoems(transformedPoems);
+    } catch (error) {
+      console.error('Error fetching poems:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const applyFilters = () => {
+    let filtered = poems;
+    
+    // Filter by category
+    if (activeCategory !== "all") {
+      filtered = filtered.filter(poem => poem.category === activeCategory);
+    }
+    
+    // Filter by search query
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(poem => 
+        poem.title.toLowerCase().includes(query) ||
+        poem.fullText.toLowerCase().includes(query) ||
+        poem.category.toLowerCase().includes(query)
+      );
+    }
+    
+    setFilteredPoems(filtered);
+  };
+
   const handleCategoryChange = (category: string) => {
     setActiveCategory(category);
-    const categoryPoems = getPoemsByCategory(category);
-    applyFilters(categoryPoems, searchQuery);
   };
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
-    const categoryPoems = getPoemsByCategory(activeCategory);
-    applyFilters(categoryPoems, query);
-  };
-
-  const applyFilters = (poemsToFilter: Poem[], query: string) => {
-    if (!query) {
-      setFilteredPoems(poemsToFilter);
-      return;
-    }
-
-    const filtered = poemsToFilter.filter(poem => 
-      poem.title.toLowerCase().includes(query.toLowerCase()) ||
-      poem.fullText.toLowerCase().includes(query.toLowerCase()) ||
-      poem.category.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredPoems(filtered);
   };
 
   return (
@@ -104,7 +145,13 @@ const PoemsCollection = () => {
         </motion.div>
 
         {/* Poems grid with stagger animation */}
-        <AnimatePresence mode="wait">
+        {loading ? (
+          <div className="text-center py-16">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading poems...</p>
+          </div>
+        ) : (
+          <AnimatePresence mode="wait">
           <motion.div 
             key={activeCategory}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -164,6 +211,7 @@ const PoemsCollection = () => {
             )}
           </motion.div>
         </AnimatePresence>
+        )}
       </div>
     </section>
   );
