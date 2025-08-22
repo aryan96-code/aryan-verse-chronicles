@@ -30,7 +30,6 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Save the form data to Supabase
       const { error } = await supabase
         .from('contact_submissions')
         .insert([
@@ -64,22 +63,22 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-merriweather font-bold text-primary mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Get in Touch
           </h2>
-          <div className="w-16 h-1 bg-accent mx-auto rounded-full mb-6"></div>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
             Have thoughts about my poetry? Want to collaborate? Or just want to say hello? 
             I'd love to hear from you! Every message brings joy to my writer's heart.
           </p>
         </div>
 
-        <Card className="shadow-elegant bg-white border-0">
+        <Card className="shadow-xl bg-white border-0">
           <CardHeader className="text-center pb-6">
-            <CardTitle className="text-2xl text-primary">Share Your Thoughts</CardTitle>
+            <CardTitle className="font-display text-2xl text-gray-900">Share Your Thoughts</CardTitle>
           </CardHeader>
           <CardContent className="p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -96,7 +95,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="Enter your name"
                     required
-                    className="border-gray-200 focus:border-primary focus:ring-primary/20"
+                    className="border-gray-300 focus:border-primary focus:ring-primary/20"
                   />
                 </div>
 
@@ -113,7 +112,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="your.email@example.com"
                     required
-                    className="border-gray-200 focus:border-primary focus:ring-primary/20"
+                    className="border-gray-300 focus:border-primary focus:ring-primary/20"
                   />
                 </div>
               </div>
@@ -131,14 +130,14 @@ const Contact = () => {
                   placeholder="Share your thoughts, feedback, or just say hello..."
                   rows={6}
                   required
-                  className="border-gray-200 focus:border-primary focus:ring-primary/20 resize-none"
+                  className="border-gray-300 focus:border-primary focus:ring-primary/20 resize-none"
                 />
               </div>
 
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full bg-gradient-primary hover:shadow-glow text-white py-6 text-lg rounded-xl transition-all duration-300 hover:scale-105"
+                className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg rounded-xl transition-all duration-300 hover:shadow-lg"
               >
                 {isSubmitting ? (
                   <div className="flex items-center">

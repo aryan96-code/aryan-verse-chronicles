@@ -2,97 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
-    /* Poetry themed colors */
-    --primary: 282 68% 35%; /* Deep purple */
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 282 68% 55%;
-
-    --secondary: 198 89% 48%; /* Ocean blue */
-    --secondary-foreground: 0 0% 98%;
-    
-    --accent: 338 76% 56%; /* Vibrant pink */
-    --accent-foreground: 0 0% 98%;
-
-    --gold: 45 93% 47%;
-    --success: 142 71% 45%;
-    --muted: 210 40% 96.1%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 282 68% 35%;
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--secondary) / 0.9));
-    --gradient-card: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--gold)));
-
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
-    --shadow-soft: 0 5px 15px hsl(0 0% 0% / 0.1);
-
-    /* Animation */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    --radius: 0.75rem;
+    --ring: 262 83% 58%;
+    --radius: 0.5rem;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -100,252 +53,116 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
-/* Poetry Card Themes - Beautiful themed styling for poem cards */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* Custom styles */
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Poem card styles */
 .poem-card {
-  border-radius: 15px;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
+  @apply bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1;
 }
 
-.poem-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  opacity: 0.15;
-  background-size: cover;
-  background-position: var(--pattern-position, center);
+.poem-card-dark {
+  @apply bg-gray-800 border-gray-700 text-white;
 }
 
-.poem-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+/* Category badges */
+.category-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
 }
 
-.poem-header {
-  padding: 1.5rem;
-  position: relative;
-  flex-shrink: 0;
+.category-english {
+  @apply bg-blue-100 text-blue-800;
 }
 
-.poem-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+.category-hindi {
+  @apply bg-green-100 text-green-800;
 }
 
-.poem-content {
-  padding: 1.5rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+.category-shayari {
+  @apply bg-purple-100 text-purple-800;
+}
+
+/* Featured badge */
+.featured-badge {
+  @apply bg-yellow-100 text-yellow-800 border border-yellow-200;
+}
+
+/* Responsive text */
+.poem-title {
+  @apply text-xl font-display font-semibold text-gray-900 mb-2 line-clamp-2;
 }
 
 .poem-preview {
-  font-style: italic;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-  opacity: 0.9;
+  @apply text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4;
 }
 
-.poem-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
+/* Button styles */
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md font-medium transition-colors;
 }
 
-.read-btn {
-  padding: 0.6rem 1.5rem;
-  border: none;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.15);
-  color: inherit;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-  backdrop-filter: blur(10px);
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-md font-medium transition-colors;
 }
 
-.read-btn:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+/* Utility classes */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.featured-badge {
-  background: linear-gradient(45deg, #ffda6b, #ffa86b);
-  color: #16213e;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.poem-category-badge {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(5px);
+/* Hero section */
+.hero-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-/* Individual Theme Styles */
-.theme-rebellion {
-  background: linear-gradient(135deg, #2d0b3b 0%, #4a1e41 50%, #2d0b3b 100%);
-  color: #ffe6f2;
-  --pattern-position: 30% 70%;
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.theme-rebellion::before {
-  background-image: radial-gradient(circle at 30% 70%, rgba(236, 72, 153, 0.15) 0%, transparent 50%);
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
 }
 
-.theme-marne {
-  background: linear-gradient(135deg, #0f3b5c 0%, #1e2a3a 100%);
-  color: #d1eaff;
-  --pattern-position: 70% 30%;
+/* Poem content styling */
+.poem-content {
+  @apply whitespace-pre-wrap leading-relaxed text-gray-800;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.8;
 }
 
-.theme-marne::before {
-  background-image: radial-gradient(circle at 70% 30%, rgba(100, 181, 246, 0.15) 0%, transparent 50%);
-}
-
-.theme-yadon {
-  background: linear-gradient(135deg, #3d2c5c 0%, #2d1b4e 100%);
-  color: #e6d7ff;
-  --pattern-position: center;
-}
-
-.theme-yadon::before {
-  background-image: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
-}
-
-.theme-tere-bin {
-  background: linear-gradient(135deg, #3c1c36 0%, #2a1425 100%);
-  color: #ffd6f0;
-  --pattern-position: 80% 20%;
-}
-
-.theme-tere-bin::before {
-  background-image: radial-gradient(circle at 80% 20%, rgba(244, 63, 94, 0.15) 0%, transparent 50%);
-}
-
-.theme-tere-nishaan {
-  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #1b4332 100%);
-  color: #d8f3dc;
-  --pattern-position: 20% 80%;
-}
-
-.theme-tere-nishaan::before {
-  background-image: radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
-}
-
-.theme-barbadi {
-  background: linear-gradient(135deg, #5c162e 0%, #3d0c1f 100%);
-  color: #ffd1dc;
-  --pattern-position: 60% 40%;
-}
-
-.theme-barbadi::before {
-  background-image: radial-gradient(circle at 60% 40%, rgba(225, 29, 72, 0.15) 0%, transparent 50%);
-}
-
-.theme-jane-ke-baad {
-  background: linear-gradient(135deg, #2b2d42 0%, #1a1c2b 100%);
-  color: #d6e2ff;
-  --pattern-position: 40% 60%;
-}
-
-.theme-jane-ke-baad::before {
-  background-image: radial-gradient(circle at 40% 60%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
-}
-
-.theme-sitara {
-  background: linear-gradient(135deg, #3d0c4c 0%, #250630 100%);
-  color: #f4ccff;
-  --pattern-position: 15% 85%;
-}
-
-.theme-sitara::before {
-  background-image: radial-gradient(circle at 15% 85%, rgba(168, 85, 247, 0.15) 0%, transparent 50%);
-}
-
-.theme-longing {
-  background: linear-gradient(135deg, #0b3b5d 0%, #072540 100%);
-  color: #cce6ff;
-  --pattern-position: 90% 10%;
-}
-
-.theme-longing::before {
-  background-image: radial-gradient(circle at 90% 10%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
-}
-
-.theme-silence {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 50%, #1a1a1a 100%);
-  color: #e6e6e6;
-  --pattern-position: center;
-}
-
-.theme-silence::before {
-  background-image: radial-gradient(circle at 50% 50%, rgba(113, 113, 122, 0.15) 0%, transparent 50%);
-}
-
-.theme-midnight {
-  background: linear-gradient(135deg, #1a1a40 0%, #0d0d2b 100%);
-  color: #d6d6ff;
-  --pattern-position: 25% 75%;
-}
-
-.theme-midnight::before {
-  background-image: radial-gradient(circle at 25% 75%, rgba(79, 70, 229, 0.15) 0%, transparent 50%);
-}
-
-.theme-dil-ki-baat {
-  background: linear-gradient(135deg, #5c2c2c 0%, #3d1c1c 100%);
-  color: #ffd6d6;
-  --pattern-position: 75% 25%;
-}
-
-.theme-dil-ki-baat::before {
-  background-image: radial-gradient(circle at 75% 25%, rgba(249, 115, 22, 0.15) 0%, transparent 50%);
-}
-
-.theme-chali-gayi {
-  background: linear-gradient(135deg, #2c3c5c 0%, #1c2c4c 100%);
-  color: #d6e0ff;
-  --pattern-position: center;
-}
-
-.theme-chali-gayi::before {
-  background-image: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+.poem-content-dark {
+  @apply text-gray-200;
 }
