@@ -22,40 +22,38 @@ That''s my revolution:
 Refusing to let their wounds become my weapons.', true, '{"gradient": "from-purple-900 via-red-800 to-pink-900", "accentColor": "#ec4899", "textColor": "#ffe6f2", "bgPattern": "radial-gradient(circle at 30% 70%, rgba(236, 72, 153, 0.15) 0%, transparent 50%)", "patternPosition": "30% 70%"}'),
 
 ('marne ke baad bhi tmhara hoon', 'hindi', 'kal jisne kaha tha "tmse nafrat hai" aaj wahi mere kafan par gulab rakh gaii... kya dekhni aai thii...', 'kal jisne kaha tha "tmse nafrat hai"
+kal jisne kaha tha "tmse  nafrat hai"
 aaj wahi mere kafan par gulab rakh gaii...
 kya dekhni aai thii...
+ki meri chuppi me koi jawab to nahi?
 
-marne ke baad bhi tmhara hoon,
-jeeete jee bs tmhara hii tha,
-ab smjh aaya kya matlab tha-
-"mohabbat maut se bhi gehari hoti hai"
+usne chhua mera haath-
+jaise dar rhi ho ki achanak pakad na lun,
+maine socha tha markar bhi nhi milunga,
+par ye kya -
+wo mere laash se maafi maang rahi haii...
 
-ab wo aa rahi hai roz qabar par,
-kehti hai "kyu chle gye the?"
-are mai to tera hi tha,
-tu kahan thii jab main tera tha?
+uski aankho me wahi sawaal tha - 
+"tumhe galat samjha kya main?"
+magar ab to mere hoth sile hue the,
+sayad wo sun paati agar taharti ak pal aur..
 
-ab is dhool mitti k andar se,
-dekh rha hoon tmhee bukhar mein,
-kehna chah rha hoon "main yahan hoon"
-par koi awaz hi nahi niklti...
+wo royi nahi , bas usne 
+meri dayri ka wo panna faara,
+jahan maine likha tha-
+"marne ke baad bhi tmhara hoon.."
 
-machhar bhi ab nahi aate mere paas,
-kyunki ab khoon bhi nahi hai,
-tmhari yaadein hii bs haii,
-aur wo bhi kam hoti ja rahi haii...', false, '{"gradient": "from-blue-900 via-slate-800 to-gray-900", "accentColor": "#64b5f6", "textColor": "#d1eaff", "bgPattern": "radial-gradient(circle at 70% 30%, rgba(100, 181, 246, 0.15) 0%, transparent 50%)", "patternPosition": "70% 30%"}'),
+ab wo har shaam meri kabr par
+akhbar ka wo tukda rkh jaati hai,
+jisme likha hai-
+"adhure pyaar ki laash mili..".', false, '{"gradient": "from-blue-900 via-slate-800 to-gray-900", "accentColor": "#64b5f6", "textColor": "#d1eaff", "bgPattern": "radial-gradient(circle at 70% 30%, rgba(100, 181, 246, 0.15) 0%, transparent 50%)", "patternPosition": "70% 30%"}'),
 
 ('मैं तेरी यादों की रेत में...', 'shayari', 'मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ... तू हवा बन के बिखेर दे या फिर मिट्टी बन के छुपा ले,', 'मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...
 तू हवा बन के बिखेर दे या फिर मिट्टी बन के छुपा ले,
 
-जब से तू गया है, मैं सिर्फ एक परछाई हूँ,
-जो दीवारों पे नाचती है जब चाँद निकलता है।
-
-कभी-कभी लगता है तू वापस आ जाएगा,
-खासकर जब बारिश होती है और तेरी खुशबू आती है।
-
-पर फिर याद आता है कि तू तो बस एक ख्वाब था,
-जो मैंने देखा था अपनी जागती आँखों से।
+"मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...  
+तू हवा बन के बिखेर दे या फिर मिट्टी बन के छुपा ले,  
+पर इतना कर कि कोई पूछे भी तो कह सकूँ — वो मेरा नहीं था, मगर मैं उसकी थी... ये बात अब तक दिल में है तो है।
 
 मैं तेरी यादों की रेत में धीरे-धीरे राख हो रहा हूँ...', false, '{"gradient": "from-purple-900 via-indigo-800 to-blue-900", "accentColor": "#8b5cf6", "textColor": "#e0e7ff", "bgPattern": "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)", "patternPosition": "center"}'),
 
@@ -81,52 +79,93 @@ Humse poocho, hum bata denge.
 Tere bin jeete hue bhi hum marr gaye...', false, '{"gradient": "from-pink-900 via-rose-800 to-red-900", "accentColor": "#f43f5e", "textColor": "#ffd6d6", "bgPattern": "radial-gradient(circle at 80% 20%, rgba(244, 63, 94, 0.15) 0%, transparent 50%)", "patternPosition": "80% 20%"}'),
 
 ('Tere Nishaan', 'shayari', 'Tere jaane ke baad bhi, Mere kamre ki hawa ne seekh li hai - Tere perfume ki tarah thaerna', 'Tere jaane ke baad bhi,
-Mere kamre ki hawa ne seekh li hai - 
-Tere perfume ki tarah thaerna
+Tere jaane ke baad bhi,  
+Mere kamre ki hawa ne seekh li hai -  
+Tere perfume ki tarah thaerna.
 
-Meri neend ne sikha liya hai -
-Tere saath sone ka andaaz
+Woh gift-bags abhi bhi khali nahi hote,  
+Unmein se nikalti hai teri aawaz -  
+"Ye to rakh lo, meri yaad ban jayega..."  
 
-Mere khayalon ne bana liya hai -
-Tera ek permanent ghar
+Aur woh tissue...  
+Jis par tune lipstick chhod di thi,  
+Ab woh mere honton ka hissa hai,  
+Har gam ko chup-chap ponchta hua.  
 
-Aur main?
-Main sirf ek kiraayedaar hoon
-Apne hi ghar mein,
-Jahan har cheez teri hai
-Aur main bas... mehman.
+Main abhi bhi pehanta hoon woh shirt,  
+Jismein tum kehti thi -  
+"Dekho, mera rang chadh gaya tum par!"  
+Par ab woh rang feeka padta hai,  
+Har dhulai mein tumhari yaad ke saath.  
 
-Par kya karun?
-Ye sab nishaan jo tune chhode hain,
-Ye sirf yaadein nahi,
-Mere hone ka saboot hain.
+Aur haan...  
+Main abhi bhi chaand se baatein karta hoon,  
+Kyuki woh bhi tumhari tarah  
+Meri baat sunkar chup rehta hai.  
 
-Tere bina main sirf exist karta tha,
-Tere saath maine jeena seekha tha.', true, '{"gradient": "from-green-900 via-emerald-800 to-teal-900", "accentColor": "#10b981", "textColor": "#d8f3dc", "bgPattern": "radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 50%)", "patternPosition": "20% 80%"}'),
+Shaam dhalte hi sooraj doobne lagta hai,  
+Aur main sochta hoon -  
+Kya tum bhi kahin  
+Isi andhere ko gin rahi ho?.', true, '{"gradient": "from-green-900 via-emerald-800 to-teal-900", "accentColor": "#10b981", "textColor": "#d8f3dc", "bgPattern": "radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 50%)", "patternPosition": "20% 80%"}'),
 
 ('तेरे साथ हर बर्बादी भी', 'hindi', 'लोग रोकते हैं... "रुक जा! ये राह अंधेरी है, इश्क़ तेरा तुझे निगल जाएगा, दुनिया तुझे बर्बाद कर जाएगी!"', 'लोग रोकते हैं...
+लोग रोकते हैं...
 "रुक जा! ये राह अंधेरी है,
 इश्क़ तेरा तुझे निगल जाएगा,
 दुनिया तुझे बर्बाद कर जाएगी!"
 
-और मैं मुस्कराकर कहता हूँ -
-"तेरे साथ हर बर्बादी भी जन्नत लगती है।"
+उनकी बातों से डरता तो नहीं,
+पर कभी-कभी सोचता हूँ —
+"क्या वाकई… मेरे सारे सपने,
+मेरी पहचान, मेरी खुशियाँ—
+सब कुछ खो जाएगा, बस उस एक चेहरे के लिए?"
 
-क्योंकि प्रेम में बर्बादी भी एक उपहार है,
-जो सिर्फ दिल वाले ही समझ सकते हैं।
+फिर भी…
+जब तेरी याद आती है,
+दिल की हर धड़कन कहती है —
+"अगर उसकी मुस्कान मिल जाए,
+तो बर्बाद हो जाएँ सारे दिन!
+अगर उसकी आवाज़ सुनाई दे,
+तो मिट जाए मेरी हर कहानी!"
 
-मैं तुझसे प्रेम करूँगा,
-चाहे दुनिया मुझे पागल कहे,
-चाहे लोग मुझसे मुँह फेर लें,
-चाहे मैं सबकुछ खो दूँ।
+और अगर…
+वो दिन आ भी जाए,
+जब तूने मुझे अपनाया,
+मेरी आँखों में देखा,
+और मेरा हाथ थाम लिया —
 
-तेरे इश्क़ में मरना भी,
-हज़ारों ज़िंदगी जीने से बेहतर है।
+तो फिर चाहे…
+आसमान टूट पड़े,
+या ज़मीन साथ छोड़ दे,
+रिश्ते बिखर जाएँ,
+आँखों में आँसुओं का समंदर हो —
 
-इसलिए मैं चलूँगा तेरे रास्ते पर,
-चाहे वो कैसा भी हो,
-क्योंकि तेरे साथ हर बर्बादी भी
-खुशी लगती है।', false, '{"gradient": "from-red-900 via-pink-800 to-rose-900", "accentColor": "#e11d48", "textColor": "#ffd1dc", "bgPattern": "radial-gradient(circle at 60% 40%, rgba(225, 29, 72, 0.15) 0%, transparent 50%)", "patternPosition": "60% 40%"}'),
+लेकिन देख!
+मेरे होंठों पर एक मुस्कान होगी,
+मेरी रूह को सुकून मिलेगा —
+क्योंकि जब तू मिला,
+तो ये सारी "बर्बादी" ही,
+मुझे खुद से मिला गई।
+
+हाँ…
+बर्बाद हुआ मैं, तेरे इश्क़ में,
+जली मेरी दुनिया, पर यादें रौशन रहीं।
+हर दर्द अब गीत लगता है,
+हर आँसू अब साज़ लगता है।
+
+क्योंकि तू है मेरे साथ,
+तो ज़िंदगी का हर ज़ख्म,
+तेरी मोहब्बत का इनाम लगता है।
+
+बस इतना कहना है…
+तेरे प्यार की सज़ा हो या परीक्षा,
+मैं खुदा से भी लड़ जाऊँगा,
+हर ग़म को सीने से लगा लूँगा,
+क्योंकि तू जो मिल गया…
+तो हर खोई चीज़ भी,
+तेरा एहसास बन गई।
+तेरे बिना जीना सज़ा थी…
+तेरे साथ हर बर्बादी भी — "दुआ" लगती है।', false, '{"gradient": "from-red-900 via-pink-800 to-rose-900", "accentColor": "#e11d48", "textColor": "#ffd1dc", "bgPattern": "radial-gradient(circle at 60% 40%, rgba(225, 29, 72, 0.15) 0%, transparent 50%)", "patternPosition": "60% 40%"}'),
 
 ('तेरे जाने के बाद', 'hindi', 'ये जो दिल के टुकड़े होते हैं रोज़, ये जो साँसों में काँटे चुभते हैं, मैं सब सह लूँ... पर तुझे भूल जाने का', 'ये जो दिल के टुकड़े होते हैं रोज़,
 ये जो साँसों में काँटे चुभते हैं,
@@ -152,54 +191,64 @@ Tere saath maine jeena seekha tha.', true, '{"gradient": "from-green-900 via-eme
 तेरे जाने के बाद...', false, '{"gradient": "from-slate-900 via-blue-800 to-indigo-900", "accentColor": "#3b82f6", "textColor": "#d6e2ff", "bgPattern": "radial-gradient(circle at 40% 60%, rgba(59, 130, 246, 0.15) 0%, transparent 50%)", "patternPosition": "40% 60%"}'),
 
 ('Main Khud Ek Sitara Hoon', 'hindi', 'Jo milne waala nahi, uska intezaar kya karun? Har mod pe bas khamoshiyaan ho, toh izhaar kya karun? Chaand to taaron se ghira hua hai sada se,', 'Jo milne waala nahi, uska intezaar kya karun?
+Jo milne waala nahi, uska intezaar kya karun?
 Har mod pe bas khamoshiyaan ho, toh izhaar kya karun?
 Chaand to taaron se ghira hua hai sada se,
-Main khud ek sitara hoon, chaand ka intezaar kya karun?
+to aise chaand se main wafaadari kya krun?
 
-Dil mein chhupe hain hazaaron khwaab,
-Jinhe koi dekhne waala nahi,
-Aankhon mein bharti ja rahi hai raat,
-Magar koi jagaane waala nahi.
+ hnn beshaq koi aur bhii likhega uske baare mein,
+par kisi aur ki likhayi se main kyu darun?
+main to wo hoon jo har lafz me khud ko jala chuka,
+to kisi aur ke alfazon se main kyu darun?
 
-Main apni hi roshni mein jeeta hoon,
-Apne hi sapno ka raaja hoon,
-Kissi aur ke sahare ki zarurat nahi,
-Main apna khud ka sahaara hoon.
+ jab chaand ko pasand hai taaarein,
+to main chaand ke piche kyu marun?
+jisne meri Roshni me kbhi dekha hi nahi,
+uske liye khud ko kyun main kam krun?
 
-Chaand ki khushi dekh kar khush hoon,
-Sitaaron ki mehfil mein nachta hoon,
-Main khud ek sitara hoon,
-Chaand ka intezaar kya karun?
+ab chaand bhi bhid me kho raha hai,
+na pehchaan bachi na Roshni ka nasha,
+aise chaand ka main kya krun?
+jiska noor bhi ab dikhne lga jhutha sa,
 
-Raat ke andhere mein chamakta hoon,
-Din ki roshni mein chup jaata hoon,
-Par yahan bhi, wahan bhi,
-Main sirf apna hoon.', false, '{"gradient": "from-violet-900 via-purple-800 to-pink-900", "accentColor": "#a855f7", "textColor": "#f4ccff", "bgPattern": "radial-gradient(circle at 15% 85%, rgba(168, 85, 247, 0.15) 0%, transparent 50%)", "patternPosition": "15% 85%"}'),
+to ab khud ka aasman sajata hoon,
+na chaand chahiye na taare, main khud ek sitara hoon.
+
+jo tha, so tha... ab likhni hai kahani apni,
+main dard se guzra hoon... par ab main har zakhm ka shayar hoon  .', false, '{"gradient": "from-violet-900 via-purple-800 to-pink-900", "accentColor": "#a855f7", "textColor": "#f4ccff", "bgPattern": "radial-gradient(circle at 15% 85%, rgba(168, 85, 247, 0.15) 0%, transparent 50%)", "patternPosition": "15% 85%"}'),
 
 ('Longing & Loss', 'hindi', '"Jab Main Nahi Rahunga..." "Jab Main Nahi Rahunga..." Kya tab bhi aaogi tum mujhse milne? Usi chehre ko choone, jise dekhkar', '"Jab Main Nahi Rahunga..."
 
-"Jab Main Nahi Rahunga..."
+"Jab Main Nahi Rahunga..." 
+
 Kya tab bhi aaogi tum mujhse milne?
 Usi chehre ko choone, jise dekhkar
-Tumne kaha tha "kitna pyaara lagta hai"
+Tumne kaha tha -
+"Ab yeh nazara bhi beimaan lagta hai..."
 
-Kya us waqt yaad karogi
-Wo baatein jo maine tumse kahi thi?
-Wo shayariyaan jo tumhare liye likhi thi?
-Wo gaane jo tumhare saath sune the?
+Kya toote hue sheeshe ki tarah
+Mere bikhre hue aksh ko jodogi?
+Woh saansein jo tumhare naam pe rukti thi,
+Kya unki khamoshi se baat karogi?
 
-Main sochta hoon, jab main nahi rahunga,
-Kya meri jagah koi aur le lega?
-Kya woh tumhein waise hasaayega
-Jaise main hasaaya karta tha?
+Tumne kaha tha - "Tumhara pyaar kam hai",
+Par aaj mere kafan ke neeche
+Kya tumhe woh dastakhat dikhenge -
+Jahaan maine tumhare liye
+Apni zindagi ki aakhri siyahi khatam kar di thi?
 
-Par ek baat kehna chahta hoon -
-Chahe main yahan rahun ya na rahun,
-Tumhein khush dekhna chahta hoon.
-Magar sirf... sirf mere saath.
+Kya ginogi meri haddiyon pe
+Un ghaavon ke nishaan -
+Jo tumhare har "Mujhe jaane do" ne chhode the?
+Kya padh paogi mere safed honton pe
+Woh adhura waakya -
+"Maaf karna, tumhe rok liya..."
 
-Jab main nahi rahunga,
-Tab jaana ki mohabbat kya hoti hai.', false, '{"gradient": "from-cyan-900 via-blue-800 to-indigo-900", "accentColor": "#06b6d4", "textColor": "#cce6ff", "bgPattern": "radial-gradient(circle at 90% 10%, rgba(6, 182, 212, 0.15) 0%, transparent 50%)", "patternPosition": "90% 10%"}'),
+Aur jab tum jalaogi meri yaadon ko,
+To dhuen mein udti ek chitthi nazar aayegi —
+Shayad woh meri aakhri koshish hogi
+Tum tak pahunchne ki...
+Par hawa use bhi tumse door le jaayegi..', false, '{"gradient": "from-cyan-900 via-blue-800 to-indigo-900", "accentColor": "#06b6d4", "textColor": "#cce6ff", "bgPattern": "radial-gradient(circle at 90% 10%, rgba(6, 182, 212, 0.15) 0%, transparent 50%)", "patternPosition": "90% 10%"}'),
 
 ('Silence & Absence', 'english', 'Thought her silence was calm, till stillness started humming her voice, and learned no sound cuts deeper than gone.', 'Thought her silence was calm,
 till stillness started humming her voice,
