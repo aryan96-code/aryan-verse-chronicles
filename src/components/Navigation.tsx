@@ -1,25 +1,13 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { PenTool, Menu, X, User, LogOut, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/contexts/AuthContext";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { PenTool, Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
-  const { user, signOut, loading } = useAuth();
 
   const scrollToSection = (sectionId: string) => {
     if (window.location.pathname !== '/') {
-      navigate('/');
+      window.location.href = '/';
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -35,27 +23,6 @@ const Navigation = () => {
     setIsOpen(false);
   };
 
-  const handleSignOut = async () => {
-    await signOut();
-    navigate('/');
-  };
-
-  if (loading) {
-    return (
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <PenTool className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">Aryan Writes</span>
-            </div>
-            <div className="h-8 w-8 bg-muted rounded-full animate-pulse" />
-          </div>
-        </div>
-      </nav>
-    );
-  }
-
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,7 +30,7 @@ const Navigation = () => {
           {/* Logo */}
           <motion.div 
             className="flex items-center space-x-2 cursor-pointer"
-            onClick={() => navigate('/')}
+            onClick={() => scrollToSection('home')}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -99,45 +66,6 @@ const Navigation = () => {
             >
               Contact
             </button>
-            
-            {/* Auth Section */}
-            {user ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className="flex items-center space-x-2">
-                    <User className="h-4 w-4" />
-                    <span>Account</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-56">
-                  <DropdownMenuItem onClick={() => navigate('/favorites')}>
-                    <Heart className="mr-2 h-4 w-4" />
-                    My Favorites
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem onClick={handleSignOut}>
-                    <LogOut className="mr-2 h-4 w-4" />
-                    Sign Out
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <div className="flex items-center space-x-3">
-                <Button 
-                  variant="ghost" 
-                  size="sm"
-                  onClick={() => navigate('/auth')}
-                >
-                  Sign In
-                </Button>
-                <Button 
-                  size="sm"
-                  onClick={() => navigate('/auth')}
-                >
-                  Get Started
-                </Button>
-              </div>
-            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -183,48 +111,6 @@ const Navigation = () => {
             >
               Contact
             </button>
-            
-            {user ? (
-              <>
-                <Link 
-                  to="/favorites"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors py-2"
-                >
-                  <Heart className="h-4 w-4" />
-                  <span>My Favorites</span>
-                </Link>
-                <button 
-                  onClick={handleSignOut}
-                  className="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors py-2"
-                >
-                  <LogOut className="h-4 w-4" />
-                  <span>Sign Out</span>
-                </button>
-              </>
-            ) : (
-              <div className="pt-4 space-y-2">
-                <Button 
-                  variant="outline" 
-                  className="w-full"
-                  onClick={() => {
-                    navigate('/auth');
-                    setIsOpen(false);
-                  }}
-                >
-                  Sign In
-                </Button>
-                <Button 
-                  className="w-full"
-                  onClick={() => {
-                    navigate('/auth');
-                    setIsOpen(false);
-                  }}
-                >
-                  Get Started
-                </Button>
-              </div>
-            )}
           </div>
         </motion.div>
       )}

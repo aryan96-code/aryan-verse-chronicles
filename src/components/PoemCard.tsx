@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Poem } from "@/data/poems";
 import { BookOpen, Heart, Mic, Star } from "lucide-react";
-import FavoriteButton from "./FavoriteButton";
+
 
 interface PoemCardProps {
   poem: Poem;
@@ -83,7 +83,7 @@ const PoemCard = ({ poem }: PoemCardProps) => {
                 </span>
               )}
             </div>
-            <FavoriteButton poemId={poem.id} />
+            
           </div>
         </div>
         

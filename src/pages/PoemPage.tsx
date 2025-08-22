@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Share2, BookOpen, Heart, Mic, Star } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import FavoriteButton from "@/components/FavoriteButton";
+
 import { supabase } from "@/integrations/supabase/client";
 import { Poem } from "@/data/poems";
 
@@ -137,13 +137,10 @@ const PoemPage = () => {
             </Link>
           </Button>
           
-          <div className="flex items-center gap-2">
-            <FavoriteButton poemId={poem.id} />
-            <Button variant="outline" onClick={handleShare} className="flex items-center gap-2">
-              <Share2 className="h-4 w-4" />
-              Share Poem
-            </Button>
-          </div>
+          <Button variant="outline" onClick={handleShare} className="flex items-center gap-2">
+            <Share2 className="h-4 w-4" />
+            Share Poem
+          </Button>
         </motion.div>
 
         {/* Poem content */}
