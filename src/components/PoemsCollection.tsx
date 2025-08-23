@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PoemCard from "./PoemCard";
 import SearchBar from "./SearchBar";
-import { BookOpen, Heart, Mic, Sparkles, Plus } from "lucide-react";
+import { BookOpen, Heart, Mic, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Poem } from "@/data/poems";
 
@@ -121,17 +121,6 @@ const PoemsCollection = () => {
               </Button>
             );
           })}
-        </div>
-
-        {/* Add Poem Button - You can show this conditionally for admin users */}
-        <div className="text-center mb-8">
-          <Button 
-            variant="outline" 
-            className="bg-white border-dashed border-2 border-gray-300 hover:border-primary hover:bg-primary/5 text-gray-600 hover:text-primary"
-          >
-            <Plus className="h-4 w-4 mr-2" />
-            Add New Poem
-          </Button>
         </div>
 
         {/* Poems Grid */}
